@@ -1,6 +1,6 @@
 # Dev Console: edit code in a sandbox, verify with a probe, then apply
 
-> AstrBot plugin · Staging, probe instance, fingerprint-gated apply
+> AstrBot plugin · Write and apply separated by a live observer process
 
 ## The problem
 
