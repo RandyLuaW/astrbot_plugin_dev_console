@@ -1,0 +1,27 @@
+{
+  "enabled": {
+    "type": "bool",
+    "default": true,
+    "description": "启用开发工位。关闭后不再注入工位提示，dev_* 工具与 /dev 指令一律拒绝；已经写进 staging 的候选文件仍保留，重新打开后可以继续探针。"
+  },
+  "inject_hint": {
+    "type": "bool",
+    "default": true,
+    "description": "是否在管理员私聊里每轮注入「你有工位、五步流程」的提示。关掉后她仍能自己调用工具，但不会主动想起来有这么个地方。"
+  },
+  "max_read_lines": {
+    "type": "int",
+    "default": 600,
+    "description": "dev_read_file 单次最多返回多少行，也是她传 max_lines 时的硬上限。读大文件靠 offset 分段，别一次读爆上下文。"
+  },
+  "max_write_bytes": {
+    "type": "int",
+    "default": 204800,
+    "description": "dev_write_file 单次写入的字节上限，默认 200KB。超了直接拒绝、不落盘，防止一次塞进整份超大文件。"
+  },
+  "probe_timeout": {
+    "type": "int",
+    "default": 180,
+    "description": "探针默认超时秒数（另端口启动 + 健康检查）。机器慢、插件多的时候调大；dev_probe 自己传了 timeout 就以传入值为准。"
+  }
+}

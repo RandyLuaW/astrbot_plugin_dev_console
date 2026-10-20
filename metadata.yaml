@@ -1,0 +1,15 @@
+name: astrbot_plugin_dev_console
+display_name: 开发工位
+desc: "让 Agent 在沙箱里改自己的代码：候选先写 staging，再由隔离的探针实例验证（静态编译 + 另端口启动 + 健康检查），人工确认后才落地。不直写运行中的源码，改坏了不影响线上。只在管理员私聊里生效，群里完全不可见。"
+short_desc: 沙箱改码 + 探针验证 + 人工落地
+author: Randy Lua
+repo: https://github.com/RandyLuaW/astrbot_plugin_dev_console
+version: 1.1.0
+astrbot_version: ">=4.28.0"
+support_platforms:
+  - aiocqhttp
+tags:
+  - 开发
+  - 自我修改
+  - 沙箱
+  - 探针
